@@ -1,8 +1,9 @@
 'use client'
+import Card from '@/components/Card';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-export default function About() {
+export default function Projects() {
   const controls = useAnimation();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -30,19 +31,21 @@ export default function About() {
 
   return (
     <motion.main
-      id="Sobre"
+      id="Projetos"
       initial={{ opacity: 0, x: -50 }}
       animate={controls}
       transition={{ duration: 0.7 }}
-      className={`p-24 flex items-center`}
+      className={`p-24 items-center`}
     >
-      <div className="w-1 h-12 bg-victorViolet mr-4"></div>
-      <strong className="text-6xl">Sobre</strong>
-      <span className='text-9xl text-victorViolet'>{'{'}</span>
-      <h1 className='text-3xl'>Desenvolvedor com experiência em <strong className='text-victorViolet'> Front-end</strong>, <strong className='text-victorViolet'>Back-end</strong> e <strong className='text-victorViolet'>Mobile</strong>. Experiências prévias em
-        consultoria. Alta capacidade de resolução de problemas, excelente em trabalho em equipe e facilidade em
-        aprender coisas novas. <strong className='text-victorViolet'>Nivel C2 </strong>de <strong className='text-victorViolet'>inglês</strong>.
-      </h1>
+      <div className='flex items-center'>
+        <div className="w-0.5 h-12 bg-victorViolet mr-4"></div>
+        <strong className="text-6xl">Projetos</strong>
+      </div>
+      <div className='flex justify-around mt-24'>
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </motion.main>
   );
 }
