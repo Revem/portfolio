@@ -25,3 +25,30 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+{
+  scrollbar-width: thin;
+  scrollbar-color: black red;
+}
+
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #bf8bff;
+  border-radius: 14px;
+  border: 3px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cca3ff;
+ 
+}
