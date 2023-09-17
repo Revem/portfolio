@@ -45,9 +45,11 @@ export default function Tecnologies() {
       </div>
       <div className='md:p-10 md:flex md:justify-center md:gap-5 xl:gap-24 p-12 grid gap-24'>
         <div className=' p-12 flex flex-col border-solid border-victorViolet hover:border-white border-2 rounded-tl-3xl rounded-md items-center justify-center flex-row max-w-md self-center place-self-center hover:-translate-y-6 transition-all text-center'>
-          <strong className='text-victorViolet p-5 text-xl'>Linguagens</strong>
+          <strong className=' p-5 text-xl'>Linguagens</strong>
           <div className='grid grid-cols-3 gap-5 p-5'>
-            <BiLogoJavascript className='text-7xl text-victorViolet hover:text-white transition-all duration-500' />
+            <div className='group'>
+              <BiLogoJavascript className='text-7xl text-victorViolet hover:text-white transition-all duration-500' />
+            </div>
             <BiLogoTypescript className='text-7xl text-victorViolet hover:text-white transition-all duration-500' />
             <FaJava className='text-7xl text-victorViolet hover:text-white transition-all duration-500' />
             <FaPython className='text-7xl text-victorViolet hover:text-white transition-all duration-500' />
@@ -56,7 +58,7 @@ export default function Tecnologies() {
           </div>
         </div>
         <div className='p-12 flex flex-col border-solid border-victorViolet hover:border-white border-2 rounded-tl-3xl rounded-md items-center justify-center flex-row max-w-md self-center place-self-center hover:-translate-y-6 transition-all text-center'>
-          <strong className='text-victorViolet p-5 text-xl'>Frameworks e Bibliotecas</strong>
+          <strong className=' p-5 text-xl'>Frameworks e Bibliotecas</strong>
           <div className='grid grid-cols-3 gap-5 p-5'>
             <FaReact className='text-7xl text-victorViolet hover:text-white transition-all duration-500' />
             <FaNodeJs className='text-7xl text-victorViolet hover:text-white transition-all duration-500' />
@@ -69,7 +71,7 @@ export default function Tecnologies() {
         </div>
 
         <div className='p-12 flex flex-col border-solid border-victorViolet hover:border-white border-2 rounded-tl-3xl rounded-md items-center justify-center flex-row max-w-md self-center place-self-center hover:-translate-y-6 transition-all text-center'>
-          <strong className='text-victorViolet p-5 text-xl'>Banco de Dados e outros</strong>
+          <strong className=' p-5 text-xl'>Banco de Dados e outros</strong>
           <div className='grid grid-cols-3 gap-5 p-5'>
             <BiLogoMongodb className='text-7xl text-victorViolet hover:text-white transition-all duration-500' />
             <BiLogoPostgresql className='text-7xl text-victorViolet hover:text-white transition-all duration-500' />
