@@ -44,7 +44,7 @@ export default function Card({ title, description, gitUrl, liveUrl, printUrl, no
         {gitUrl || liveUrl ?
           <div>
             <div className="flex justify-around mt-5 mb-5 mr-24 ml-24">
-              {gitUrl ? <a href={gitUrl}><button className="border-2  rounded-md border-victorViolet hover:bg-victorViolet hover:text-black hover:rounded-tl-2xl transition-all duration-500 p-1 flex items-center"><FaGithubAlt className='text-xl mr-2' />{' Github'}</button></a> : <></>}
+              {gitUrl ? <a href={gitUrl}><button className="border-2  rounded-md border-victorViolet hover:bg-victorViolet hover:text-black hover:rounded-tl-2xl transition-all duration-500 p-1 flex items-center"><FaGithubAlt className='text-xl mr-2' />{'Github'}</button></a> : <></>}
               {liveUrl ? <a href={liveUrl}><button className="border-2  rounded-md border-victorViolet hover:bg-victorViolet hover:text-black hover:rounded-tl-2xl transition-all duration-500 p-1 flex items-center"><FaExternalLinkAlt className='text-xl mr-2' />Deploy</button></a> : <></>}
             </div>
           </div> : <>

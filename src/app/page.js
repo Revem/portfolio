@@ -1,4 +1,6 @@
 
+import Contacts from '@/pages/Contacts';
+import Experiences from '@/pages/Experiences';
 import Projects from '@/pages/Projects';
 import Tecnologies from '@/pages/Tecnologies';
 import Footer from '../../src/components/footer';
@@ -13,6 +15,11 @@ export default function Home() {
     <About />
     <Projects />
     <Tecnologies />
+    <div className='flex items-start justify-around align-top'>
+      <Experiences />
+      <Contacts />
+    </div>
+
 
     <Footer />
   </>

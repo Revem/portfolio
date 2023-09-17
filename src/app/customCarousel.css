@@ -1,0 +1,19 @@
+/* CustomCarousel.css */
+
+/* Ajuste a posição dos indicadores */
+.custom-carousel .carousel .thumb {
+  position: absolute;
+  bottom: 10px; /* Ajuste a distância do fundo conforme necessário */
+}
+
+/* Estilos personalizados para os indicadores */
+.custom-carousel .carousel .thumb img {
+  width: 12px; /* Ajuste a largura das bolinhas */
+  height: 12px; /* Ajuste a altura das bolinhas */
+  margin: 0 5px; /* Ajuste o espaçamento entre as bolinhas */
+  opacity: 0.5; /* Ajuste a opacidade das bolinhas não ativas */
+}
+
+.custom-carousel .carousel .thumb.active {
+  opacity: 1; /* Estilo para a bolinha ativa */
+}
