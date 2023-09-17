@@ -41,13 +41,11 @@ export default function Projects() {
         <div className="w-0.5 h-12 bg-victorViolet mr-4"></div>
         <strong className="text-6xl">Projetos</strong>
       </div>
-      <div className='flex justify-around mt-24 grid grid-cols-4 gap-10 md:grid-cols-3 sm:grid-cols-2'>
-        <Card node javascript title="Accounts" description="Sistema de simulação de contas bancarias diretamente no terminal." gitUrl="https://github.com/Revem/Accounts" printUrl="https://media.discordapp.net/attachments/1152003718762463263/1152371766556115004/image.png?width=1210&height=478" />
-        <Card title="Projeto 2" description="Um projeto lindo" />
-        <Card title="Projeto 3" description="Um projeto feio" />
-        <Card title="Projeto 3" description="Um projeto feio" />
-        <Card title="Projeto 3" description="Um projeto feio" />
-        <Card title="Projeto 3" description="Um projeto feio" />
+      <div className='flex justify-around mt-24 grid grid-cols-1 gap-10 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1'>
+        <Card node javascript title="Accounts" description="Sistema de simulação de contas bancarias diretamente no terminal. Criado com NodeJS." gitUrl="https://github.com/Revem/Accounts" printUrl="https://media.discordapp.net/attachments/1152003718762463263/1152371766556115004/image.png?width=1210&height=478" />
+        <Card node javascript html css title="Thoughts" description="Website para registrar pensamentos e torna-los públicos para os outros utilizadores. Criado com NodeJS, Express e Handlebars." printUrl="https://media.discordapp.net/attachments/1152003718762463263/1152781438991732736/image.png?width=960&height=348" gitUrl="https://github.com/Revem/Thoughts" />
+        <Card javascript react css html title="Amanhã vai ser Pior" description="Landing Page para o livro Amanhã vai ser Pior dos Galãs Feios. Criado utilizando ReactJS." gitUrl="https://github.com/Revem/LandingPage-Amanha-Vai-ser-Pior" printUrl="https://media.discordapp.net/attachments/1152003718762463263/1152773244600975481/image.png?width=960&height=358" liveUrl="http://landing-page-amanha-vai-ser-pior.vercel.app" />
+
       </div>
     </motion.main>
   );
