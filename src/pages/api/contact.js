@@ -1,4 +1,5 @@
-import { mailOptions, transporter } from "../../config/nodemailer";
+
+import { mailOptions, transporter } from "../../config/nodemailer"; // Mantém a importação das opções de email
 
 const CONTACT_MESSAGE_FIELDS = {
   name: "Name",
@@ -23,6 +24,18 @@ const generateEmailContent = (data) => {
   };
 };
 
+const sendMailPromise = (mailOptions) => {
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, (err, response) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(response);
+      }
+    });
+  });
+};
+
 const handler = async (req, res) => {
   if (req.method === "POST") {
     const data = req.body;
@@ -31,7 +44,7 @@ const handler = async (req, res) => {
     }
 
     try {
-      await transporter.sendMail({
+      await sendMailPromise({
         ...mailOptions,
         ...generateEmailContent(data),
         subject: "Nova mensagem do portifólio!",
