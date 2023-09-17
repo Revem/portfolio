@@ -1,5 +1,6 @@
 
 import Projects from '@/pages/Projects';
+import Tecnologies from '@/pages/Tecnologies';
 import Footer from '../../src/components/footer';
 import Navbar from '../../src/components/navbar';
 import About from '../../src/pages/About';
@@ -11,7 +12,7 @@ export default function Home() {
     <Main />
     <About />
     <Projects />
-
+    <Tecnologies />
 
     <Footer />
   </>
