@@ -1,9 +1,9 @@
-export default function ExperienceCard({ cargo, empresa, descricao }) {
+export default function ExperienceCard({ cargo, empresa, descricao, lang, enCargo, enDescricao }) {
   return (
     <div className=" items-center">
       <div className="mt-5">
         <strong>
-          💼 {cargo}
+          💼 {lang == 'pt-br' ? <>{cargo} </> : <>{enCargo}</>}
         </strong>
       </div>
       <br />
@@ -12,7 +12,8 @@ export default function ExperienceCard({ cargo, empresa, descricao }) {
       </h2>
       <br />
       <div>
-        {descricao}
+        {lang == 'pt-br' ? <>{descricao} </> : <>{enDescricao}</>}
+
       </div>
       <div className="pt-5 pb-5"></div>
     </div>

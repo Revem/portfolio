@@ -17,16 +17,18 @@ import {
   BiLogoTypescript
 } from 'react-icons/bi'
 
-export default function Card({ title, description, gitUrl, liveUrl, printUrl, node, java, javascript, springboot, mongo, discord, python, html, css, tailwind, typescript, react }) {
+export default function Card({ title, description, gitUrl, liveUrl, printUrl, node, java, javascript, springboot, mongo, discord, python, html, css, tailwind, typescript, react, lang, enTitle, enDescription }) {
   return (
     <div className='flex items-center group'>
       {printUrl ? <img src={printUrl} className="object-cover p-4 max-w-md h-full rounded-md rounded-tl-2xl "></img> : <img src="https://www.vets4pets.com/siteassets/species/dog/chocolate-labrador-looking-anxious.jpg?w=585&scale=down" className="p-4 max-w-md rounded-md rounded-tl-2xl "></img>}
       <div className="-ml-24 border-solid bg-victorViolet bg-opacity-10 backdrop-blur-md border-victorViolet hover:border-white border-2 rounded-tl-3xl rounded-md items-center justify-center flex-row max-w-md self-center place-self-center hover:-translate-y-6 transition-all text-center">
 
         <strong className='p-4 text-victorViolet underline'>
-          {title ? title : "Em breve"}
+          {lang == 'pt-br' ? <>{title}</> : <>{enTitle}</>}
         </strong>
-        <h2 className="p-5">{description ? description : "Em construção"}</h2>
+        <h2 className="p-5">
+          {lang == 'pt-br' ? <>{description}</> : <>{enDescription}</>}
+        </h2>
         <div className='flex justify-around p-5 text-4xl text-victorViolet'>
           {node ? <FaNodeJs /> : <></>}
           {java ? <FaJava /> : <></>}
