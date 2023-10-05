@@ -43,7 +43,7 @@ export default function Projects({ lang }) {
             {lang === 'pt-br' ? 'Projetos' : 'Projects'}
           </strong>
         </div>
-        <div className="mt-6 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-2 justify-items-center">
           <Card lang={lang} react tailwind css html javascript
             title="Meu Portfólio" enTitle="My Portfolio"
             description="Esse portfólio que você está visualizando, o mesmo é utilizado para demonstrar meus projetos mais recentes, além de algumas informações sobre mim!"
