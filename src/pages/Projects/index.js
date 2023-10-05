@@ -1,3 +1,4 @@
+'use client'
 import Card from '@/components/Card';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
