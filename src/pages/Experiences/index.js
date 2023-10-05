@@ -1,4 +1,3 @@
-'use client'
 import ExperienceCard from '@/components/ExperienceCards';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';

@@ -1,4 +1,3 @@
-'use client'
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { BiLogoAws, BiLogoDjango, BiLogoJavascript, BiLogoMongodb, BiLogoPostgresql, BiLogoSpringBoot, BiLogoTypescript } from 'react-icons/bi';
@@ -11,34 +10,26 @@ export default function Tecnologies({ lang }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (typeof window !== 'undefined') { // Verifica se o window está definido
-        if (window.scrollY > 200) {
-          if (!isVisible) {
-            setIsVisible(true);
-            controls.start({ opacity: 1, x: 0 });
-          }
-        } else {
-          if (isVisible) {
-            setIsVisible(false);
-            controls.start({ opacity: 0, x: -50 });
-          }
+      if (window.scrollY > 200) {
+        if (!isVisible) {
+          setIsVisible(true);
+          controls.start({ opacity: 1, x: 0 });
+        }
+      } else {
+        if (isVisible) {
+          setIsVisible(false);
+          controls.start({ opacity: 0, x: -50 });
         }
       }
     };
 
-    if (typeof window !== 'undefined') { // Verifica se o window está definido
-      window.addEventListener('scroll', handleScroll);
-    }
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      if (typeof window !== 'undefined') { // Verifica se o window está definido
-        window.removeEventListener('scroll', handleScroll);
-      }
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [controls, isVisible]);
 
-  const isSmallScreen = window.innerWidth <= 640; // Defina a largura máxima para telas pequenas aqui
-  const iconSize = isSmallScreen ? 'text-4xl' : 'text-7xl'; // Tamanho menor para telas pequenas
 
   return (
     <motion.main
@@ -53,37 +44,37 @@ export default function Tecnologies({ lang }) {
         {lang == 'pt-br' ? (<strong className="text-4xl md:text-8xl">Tecnologias</strong>) : (<strong className="text-6xl">Skills</strong>)}
       </div>
       <div className='md:p-10 grid md:grid-cols-3 md:gap-5 lg:gap-24 p-6 grid-cols-1 gap-6'>
-        <div className={`md:col-span-1 p-6 flex flex-col border-solid border-victorViolet hover:border-white border-2 rounded-tl-3xl rounded-md items-center justify-center hover:-translate-y-6 transition-all text-center ${isSmallScreen ? 'space-y-2' : ''}`}>
+        <div className={`md:col-span-1 p-6 flex flex-col border-solid border-victorViolet hover:border-white border-2 rounded-tl-3xl rounded-md items-center justify-center hover:-translate-y-6 transition-all text-center sm:space-y-2`}>
           {lang == 'pt-br' ? (<strong className='p-3 text-xl'>Linguagens</strong>) : (<strong className='p-3 text-xl'>Languages</strong>)}
-          <div className={`grid grid-cols-3 gap-5 p-5 ${isSmallScreen ? 'gap-y-2' : ''}`}>
-            <BiLogoJavascript className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <BiLogoTypescript className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <FaJava className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <FaPython className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <FaHtml5 className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <FaCss3 className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
+          <div className={`grid grid-cols-3 gap-5 p-5 sm:gap-y-2`}>
+            <BiLogoJavascript className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <BiLogoTypescript className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <FaJava className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <FaPython className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <FaHtml5 className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <FaCss3 className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
           </div>
         </div>
-        <div className={`md:col-span-1 p-6 flex flex-col border-solid border-victorViolet hover:border-white border-2 rounded-tl-3xl rounded-md items-center justify-center hover:-translate-y-6 transition-all text-center ${isSmallScreen ? 'space-y-2' : ''}`}>
+        <div className={`md:col-span-1 p-6 flex flex-col border-solid border-victorViolet hover:border-white border-2 rounded-tl-3xl rounded-md items-center justify-center hover:-translate-y-6 transition-all text-center sm:space-y-2`}>
           {lang == 'pt-br' ? (<strong className='p-3 text-xl'>Frameworks e Bibliotecas</strong>) : (<strong className='p-3 text-xl'>Frameworks and Libraries</strong>)}
-          <div className={`grid grid-cols-3 gap-5 p-5 ${isSmallScreen ? 'gap-y-2' : ''}`}>
-            <FaReact className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <FaNodeJs className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <FaAngular className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <BiLogoSpringBoot className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <FaFlask className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <BiLogoDjango className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
+          <div className={`grid grid-cols-3 gap-5 p-5 sm:gap-y-2`}>
+            <FaReact className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <FaNodeJs className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <FaAngular className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <BiLogoSpringBoot className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <FaFlask className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <BiLogoDjango className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
           </div>
         </div>
-        <div className={`md:col-span-1 p-6 flex flex-col border-solid border-victorViolet hover:border-white border-2 rounded-tl-3xl rounded-md items-center justify-center hover:-translate-y-6 transition-all text-center ${isSmallScreen ? 'space-y-2' : ''}`}>
+        <div className={`md:col-span-1 p-6 flex flex-col border-solid border-victorViolet hover:border-white border-2 rounded-tl-3xl rounded-md items-center justify-center hover:-translate-y-6 transition-all text-center sm:space-y-2`}>
           {lang == 'pt-br' ? (<strong className='p-3 text-xl'>Banco de Dados e outros</strong>) : (<strong className='p-3 text-xl'>Database and others</strong>)}
-          <div className={`grid grid-cols-3 gap-5 p-5 ${isSmallScreen ? 'gap-y-2' : ''}`}>
-            <BiLogoMongodb className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <BiLogoPostgresql className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <DiMysql className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <BiLogoAws className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <FaDocker className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
-            <FaGithub className={`${iconSize} text-victorViolet hover:text-white transition-all duration-500`} />
+          <div className={`grid grid-cols-3 gap-5 p-5 sm:gap-y-2`}>
+            <BiLogoMongodb className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <BiLogoPostgresql className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <DiMysql className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <BiLogoAws className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <FaDocker className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
+            <FaGithub className={`text-4xl md:text-7xl text-victorViolet hover:text-white transition-all duration-500`} />
           </div>
         </div>
       </div>

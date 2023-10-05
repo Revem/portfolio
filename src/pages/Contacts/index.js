@@ -1,4 +1,3 @@
-'use client'
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { sendContactForm } from "../../lib/api";
