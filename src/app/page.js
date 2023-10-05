@@ -25,10 +25,11 @@ export default function Home() {
     <About lang={language} />
     <Projects lang={language} />
     <Tecnologies lang={language} />
-    <div className='flex items-start justify-around align-top'>
+    <div className='flex flex-col md:flex-row items-start justify-around align-top'>
       <Experiences lang={language} />
       <Contacts lang={language} />
     </div>
+
 
 
     <Footer lang={language} />

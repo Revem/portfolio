@@ -1,67 +1,58 @@
-'use client'
-import { FaGithubAlt, FaLinkedin } from 'react-icons/fa'
-import Typewriter from 'typewriter-effect'
+import { FaGithubAlt, FaLinkedin } from 'react-icons/fa';
+import Typewriter from 'typewriter-effect';
 
 export default function Main({ lang }) {
   return (
-    <main id="Home" className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main id="Home" className="flex flex-col justify-center items-center p-5 md:p-10 lg:p-24 h-screen">
 
-      {
-        lang === 'pt-br' ? (
-          <div className="title text-6xl w-full p-5 text-center">
-            <h1 className='text-8xl text-victorViolet mr-72'><strong>Olá,</strong></h1>
-            <h1>Meu nome é <span className='text-victorViolet transition-all duration-500 hover:drop-shadow-glow'><strong>Victor</strong></span></h1>
-            <h1 className='text-center'>e eu sou um
-              <span className='flex text-center justify-center'>
-                <div className='text-victorViolet'>
-                  <strong>
-                    <Typewriter
-                      options={{
-                        strings: ['{back-end}', '{front-end}', '{fullstack}'],
-                        autoStart: true,
-                        loop: true,
-                      }}
-                    /></strong>
-                </div>
-                developer
-              </span>
-
-            </h1>
-          </div>) : (
-          <div className="title text-6xl w-full p-5 text-center">
-            <h1 className='text-8xl text-victorViolet mr-72'><strong>Hello,</strong></h1>
-            <h1>My name is <span className='text-victorViolet transition-all duration-500 hover:drop-shadow-glow'><strong>Victor</strong></span></h1>
-            <h1 className='text-center'>and i am a
-              <span className='flex text-center justify-center'>
-                <div className='text-victorViolet'>
-                  <strong>
-                    <Typewriter
-                      options={{
-                        strings: ['{back-end}', '{front-end}', '{fullstack}'],
-                        autoStart: true,
-                        loop: true,
-                      }}
-                    /></strong>
-                </div>
-                developer
-              </span>
-            </h1>
-          </div>)
-      }
-
-      <div className="">
-        <a className='p-5 group' href="http://github.com/revem" ><button className='border-victorViolet border-solid border-2 rounded-2xl p-4 text-xl transition-all duration-500 hover:bg-victorViolet hover:rounded-tl-3xl  hover:text-black drop-shadow-glow'><FaGithubAlt /> </button>
-          <div className="mb-5 transition-all duration-500 opacity-0 border-2 border-victorViolet text-white text-center text-xs rounded-lg py-2 absolute z-50 group-hover:opacity-100 bottom-full -left-1/2 ml-16 px-3 pointer-events-none">
-            Github
-          </div></a>
-        <a className='p-5 group' href="https://linkedin.com/in/victorpicon"><button className='border-victorViolet border-solid border-2 rounded-2xl p-4 text-xl transition-all duration-500 hover:bg-victorViolet hover:rounded-tl-3xl hover:text-black drop-shadow-glow'><FaLinkedin /></button>
-          <div className="mb-5 transition-all duration-500 opacity-0 border-2 border-victorViolet text-white text-center text-xs rounded-lg py-2 absolute z-50 group-hover:opacity-100 bottom-full -left-1/2 ml-16 px-3 pointer-events-none">
-            LinkedIn
+      <div className="title text-center">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl text-victorViolet "><strong>{lang === 'pt-br' ? 'Olá,' : 'Hello,'}</strong></h1>
+        <h1 className="text-2xl md:text-4xl lg:text-6xl text-white ">
+          {lang === 'pt-br' ? 'Meu nome é' : 'My name is'}  <span className="text-victorViolet transition-all duration-500 hover:drop-shadow-glow"><strong>Victor</strong></span>
+        </h1>
+        <h1 className="text-2xl md:text-4xl lg:text-6xl text-center text-white ">
+          {lang === 'pt-br' ? 'e eu sou um' : 'and I am a'}
+        </h1>
+        <div className="flex text-center justify-center mb-8">
+          <div className="text-xl md:text-4xl lg:text-6xl text-victorViolet">
+            <strong>
+              <Typewriter
+                options={{
+                  strings: ['{back-end}', '{front-end}', '{fullstack}'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </strong>
           </div>
+          <span className="text-2xl md:text-4xl lg:text-6xl text-white"> developer</span>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center space-x-8">
+        <a href="http://github.com/revem" className="group relative">
+          <button
+            className="border-victorViolet border-solid border-2 rounded-2xl p-2 md:p-4 lg:p-6 text-xl md:text-2xl lg:text-3xl transition-all duration-500 hover:bg-victorViolet hover:rounded-tl-3xl  drop-shadow-glow overflow-hidden"
+          >
+            <div className="tooltip duration-500 text-black text-center text-xs md:text-sm lg:text-base absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 bg-victorViolet hover:opacity-100 transition-opacity">
+              Github
+            </div>
+            <FaGithubAlt />
+          </button>
+        </a>
+        <a href="https://linkedin.com/in/victorpicon" className="group relative">
+          <button
+            className="border-victorViolet border-solid border-2 rounded-2xl p-2 md:p-4 lg:p-6 text-xl md:text-2xl lg:text-3xl transition-all duration-500 hover:bg-victorViolet hover:rounded-tl-3xl  drop-shadow-glow overflow-hidden"
+          >
+            <div className="tooltip duration-500 text-black text-center text-xs md:text-sm lg:text-base absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 bg-victorViolet hover:opacity-100 transition-opacity">
+              LinkedIn
+            </div>
+            <FaLinkedin />
+          </button>
         </a>
       </div>
-      <div></div>
-    </main>
-  )
-}
 
+
+    </main>
+  );
+}

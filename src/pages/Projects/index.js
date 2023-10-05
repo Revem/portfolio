@@ -1,4 +1,3 @@
-'use client'
 import Card from '@/components/Card';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -36,15 +35,15 @@ export default function Projects({ lang }) {
         id='Projetos'
         animate={controls}
         transition={{ duration: 0.7 }}
-        className="p-24 items-center"
+        className="p-4 md:p-24"
       >
-        <div className="flex items-center">
-          <div className="w-0.5 h-12 bg-victorViolet mr-4"></div>
-          <strong className="text-6xl">
-            {lang == 'pt-br' ? 'Projetos' : 'Projects'}
+        <div className="flex items-center justify-center">
+          <div className="w-0.5 hidden md:flex h-16 bg-victorViolet mr-4"></div>
+          <strong className="text-5xl md:text-8xl">
+            {lang === 'pt-br' ? 'Projetos' : 'Projects'}
           </strong>
         </div>
-        <div className="flex justify-around mt-24 grid grid-cols-1 gap-10 md:grid-cols-2 sm:grid-cols-1">
+        <div className="mt-6 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
           <Card lang={lang} react tailwind css html javascript
             title="Meu Portfólio" enTitle="My Portfolio"
             description="Esse portfólio que você está visualizando, o mesmo é utilizado para demonstrar meus projetos mais recentes, além de algumas informações sobre mim!"
